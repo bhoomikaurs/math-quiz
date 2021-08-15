@@ -1,22 +1,29 @@
 :root {
-  --primary: blue;
+  --primary: #f44c7f;
   --secondary: pink;
   --green: green;
   --red: red;
   --default: white;
+  --bg-color: #333a45;
+  --fill-empty: #e9ecf0;
+  --container-bg: #e9ecf0;
+  --points-bg: #e9ecf0;
 }
 * {
   box-sizing: border-box;
 }
 body {
   font-family: sans-serif;
+  background-color: var(--bg-color);
   margin: 0;
 }
 header {
   text-align: center;
   padding: 10px;
+  font-weight: 550;
   font-size: 45px;
-  background-color: grey;
+  color: var(--primary);
+  background-color: #e9ecf0;
 }
 .points {
   display: flex;
@@ -28,10 +35,10 @@ header {
 .score-container,
 .mistake-container {
   padding: 10px;
-  background-color: grey;
+  background-color: var(--points-bg);
 }
 .container {
-  background-color: grey;
+  background-color: var(--container-bg);
   max-width: 600px;
   height: 300px;
   display: flex;
@@ -51,6 +58,7 @@ form {
 #answer-box {
   padding: 10px;
   font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.432);
 }
 .question {
   font-size: 35px;
@@ -58,6 +66,8 @@ form {
 }
 #submit-btn {
   border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.432);
+
   border-radius: 5px;
   font-size: 20px;
   padding: 10px;
@@ -68,7 +78,7 @@ form {
   margin: 0 auto;
   max-width: 1000px;
   height: 75px;
-  background-color: grey;
+  background-color: var(--fill-empty);
   display: flex;
   border: 1px solid black;
   z-index: 0;
