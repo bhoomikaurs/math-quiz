@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATH QUIZ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>MATH QUIZ</header>
+    <div class="points">
+      <div class="mistake-container">
+        Mistakes:<span class="mistake">0</span>
+      </div>
+      <div class="score-container">Score:<span class="score">0</span></div>
+    </div>
+    <div class="container">
+      <div class="question">1+2</div>
+      <form>
+        <input
+          type="text"
+          placeholder="ANSWER"
+          id="answer-box"
+          autocomplete="off"
+        />
+        <input type="submit" value="sumbit" id="submit-btn" />
+      </form>
+      <button id="next-btn" hidden>Next</button>
+    </div>
+    <div class="progress">
+      <div class="fill"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+      <div class="fillempty"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

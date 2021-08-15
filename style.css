@@ -1,0 +1,100 @@
+:root {
+  --primary: blue;
+  --secondary: pink;
+  --green: green;
+  --red: red;
+  --default: white;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  text-align: center;
+  padding: 10px;
+  font-size: 45px;
+  background-color: grey;
+}
+.points {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+  font-size: 20px;
+}
+.score-container,
+.mistake-container {
+  padding: 10px;
+  background-color: grey;
+}
+.container {
+  background-color: grey;
+  max-width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+}
+form {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px;
+}
+#answer-box {
+  padding: 10px;
+  font-size: 20px;
+}
+.question {
+  font-size: 35px;
+  margin: 10px;
+}
+#submit-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+.progress {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 75px;
+  background-color: grey;
+  display: flex;
+  border: 1px solid black;
+  z-index: 0;
+}
+.fillempty {
+  width: 100px;
+  height: 75px;
+  border: 1px solid rgb(0, 0, 0);
+  z-index: 2;
+}
+.fill {
+  position: absolute;
+  background-color: var(--green);
+  height: 75px;
+  z-index: 1;
+  transition: width 0.5s ease-in-out;
+}
+.vibrate {
+  animation: vibrate 100ms ease-in-out;
+  animation-iteration-count: 2;
+}
+@keyframes vibrate {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
