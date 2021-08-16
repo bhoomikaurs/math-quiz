@@ -31,14 +31,14 @@ function handelWin() {
   player.score++;
   generateQuestion();
   if (player.score >= 10) {
-    player.score = 0;
+    player.score = 0:
   }
   const scoreBox = document.querySelector('.score');
   scoreBox.innerHTML = player.score;
   const body = document.querySelector('body');
   body.style.backgroundColor = 'var(--default)';
   const fill = document.querySelector('.fill');
-  fill.style.width = `${player.score * 100}px`;
+  fill.style.width = `${player.score*document.querySelector('.fillempty').style.width}`;
 }
 function handelLoss() {
   player.mistake++;
