@@ -89,7 +89,7 @@ form {
   border: 1px solid rgb(0, 0, 0);
   z-index: 2;
 }
-Insp .fill {
+.fill {
   position: absolute;
   background-color: var(--green);
   height: 75px;
