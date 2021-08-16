@@ -29,9 +29,11 @@ function checkCorrect(answer) {
 }
 function handelWin() {
   player.score++;
+  navigator.vibrate(20)
   generateQuestion();
   if (player.score >= 10) {
     player.score = 0;
+    alert('You won')
   }
   const scoreBox = document.querySelector('.score');
   scoreBox.innerHTML = player.score;
@@ -44,10 +46,13 @@ function handelWin() {
 }
 function handelLoss() {
   player.mistake++;
+  navigator.vibrate([40,10,40])
   if (player.mistake >= 3) {
     player.mistake = 0;
     player.score = 0;
     document.querySelector('.fill').style.width = '0px';
+    const body = document.querySelector('body');
+  body.style.backgroundColor = 'var(--default)';
   }
   const mistakeBox = document.querySelector('.mistake');
   mistakeBox.innerHTML = player.mistake;
