@@ -39,8 +39,8 @@ function handelWin() {
   body.style.backgroundColor = 'var(--default)';
   const fill = document.querySelector('.fill');
   fill.style.width = `${
-    player.score * document.querySelector('.fillempty').style.width
-  }`;
+    player.score * document.querySelector('.fillempty').offsetWidth
+  }px`;
 }
 function handelLoss() {
   player.mistake++;
@@ -73,7 +73,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
       handelLoss();
     }
   }
-  console.log(player);
 });
 
 generateQuestion();

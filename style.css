@@ -1,12 +1,13 @@
 :root {
   --primary: #f44c7f;
   --secondary: pink;
-  --green: green;
-  --red: red;
-  --default: white;
-  --bg-color: #333a45;
-  --fill-empty: #e9ecf0;
-  --container-bg: #e9ecf0;
+  --green: #40e640;
+  --red: #962929;
+  --default: #353f52;
+  --bg-color: #353f52;
+  --header-bg:#e5ebf7;
+  --fill-empty: #d4d4d4;
+  --container-bg: #dfdfdf;
   --points-bg: #e9ecf0;
 }
 * {
@@ -23,7 +24,7 @@ header {
   font-weight: 550;
   font-size: 45px;
   color: var(--primary);
-  background-color: #e9ecf0;
+  background-color: var(--header-bg);
 }
 .points {
   display: flex;
@@ -34,8 +35,9 @@ header {
 }
 .score-container,
 .mistake-container {
-  padding: 10px;
+  padding: 10px 25px;
   background-color: var(--points-bg);
+  border-radius: 5px;
 }
 .container {
   background-color: var(--container-bg);
@@ -46,6 +48,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: 100px auto;
+  border-radius: 10px;
 }
 form {
   height: 100px;
@@ -74,25 +77,29 @@ form {
   margin: 20px;
 }
 .progress {
+  --height : 70px;
   position: relative;
   margin: 0 auto;
   max-width: 1000px;
-  height: 75px;
+  height: var(--height);
   background-color: var(--fill-empty);
   display: flex;
   border: 1px solid black;
   z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .fillempty {
   width: 100px;
-  height: 75px;
+  height: var(--height);
   border: 1px solid rgb(0, 0, 0);
   z-index: 2;
 }
 .fill {
   position: absolute;
+  width: 0;
   background-color: var(--green);
-  height: 75px;
+  height: var(--height);
   z-index: 1;
   transition: width 0.5s ease-in-out;
 }
@@ -100,11 +107,24 @@ form {
   animation: vibrate 100ms ease-in-out;
   animation-iteration-count: 2;
 }
+.info{
+  text-align: center;
+  color: rgba(211, 211, 211, 0.89);
+}
 @keyframes vibrate {
   from {
     transform: rotate(-5deg);
   }
   to {
     transform: rotate(5deg);
+  }
+}
+@media screen and (max-width:800px){
+  .progress{
+    --height:55px;
+    margin: 0 10px;
+  }
+  .container{
+    width: 350px;
   }
 }
