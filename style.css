@@ -84,11 +84,12 @@ form {
   z-index: 0;
 }
 .fillempty {
+  width: 100px;
   height: 75px;
   border: 1px solid rgb(0, 0, 0);
   z-index: 2;
 }
-.fill {
+Insp .fill {
   position: absolute;
   background-color: var(--green);
   height: 75px;
